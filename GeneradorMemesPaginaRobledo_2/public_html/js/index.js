@@ -100,3 +100,8 @@ function downloadCanvas(link, canvasId, filename) {
 document.getElementById('download').addEventListener('click', function () {
     downloadCanvas(this, 'memecanvas', 'meme.png');
 }, false);
+
+function displayImage(elem) {
+    var image = document.getElementById("start-image");
+    image.src = elem.value;
+}
