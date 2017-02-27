@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html >
-<head>
-  <meta charset="UTF-8">
-  <title>Generador Memes Pag Robledo</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <title>Generador Memes Pag Robledo</title>
+        
+        <script type="text/javascript">
+            function displayImage(elem) {
+                var image = document.getElementById("start-image");
+                image.src = elem.value;
+            }
+        </script>
+        <link rel="stylesheet" href="css/style.css">
 
-  
-</head>
 
-<body>
-  <canvas id="memecanvas">
-  Sorry, canvas not supported
-</canvas>
+    </head>
 
-<img id="start-image" src="images/img1.jpg" alt="" />
+    <body>
+        <select name="imageList" onchange="displayImage(this);">
+            <option value="images/mem2.jpg">meme 1</option>
+            <option value="images/mem3.jpg">meme 2</option>
+            <option value="images/mem4.jpg">meme 3</option>
+            <option value="images/mem5.jpg">meme 4</option>
+            <option value="images/mem6.jpg">meme 5</option>
 
-<input type='text' value='estoy mamado de' id='top-text' />
-<input type='text' value=' ' id='bottom-text' />
-  
-    <script src="js/index.js"></script>
 
-</body>
+        </select>
+        <canvas id="memecanvas">
+            Sorry, canvas not supported
+        </canvas>
+
+        <img id="start-image" src="images/mem2.jpg" alt=""/>
+
+        <input type='text' value='#EstoyMamadoDe' id='top-text' />
+        <input type='text' value=' ' id='bottom-text' />
+
+        <script src="js/index.js"></script>
+
+    </body>
 </html>
